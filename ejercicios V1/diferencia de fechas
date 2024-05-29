@@ -1,0 +1,27 @@
+dias = int(input("escribe los dias en numeros"))
+
+meses = int(input("escribe el mes en numeros"))
+
+year = int(input("escribe los years en numeros"))
+
+dias2 = int(input("escribe los otros dias en numeros"))
+
+meses2 = int(input("escribe el otro mes en numeros"))
+
+year2 = int(input("escribe los year de la otra fecha")) 
+
+Rd = dias - dias2
+if Rd <0:
+        Rd = Rd * -1
+
+Rm = meses - meses2
+if Rm <0:
+        Rm = Rm * -1
+Ry = year - year2
+if Ry <0:
+        Ry = Ry * -1
+        
+print(Rd,Rm,Ry)
+
+
+#en dias la diferencia 

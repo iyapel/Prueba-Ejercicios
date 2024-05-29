@@ -1,0 +1,24 @@
+
+print("-----Se van a ingresar 5 caracteristicas-----")
+
+objeto1 = dict({input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " "})
+
+print("-----Se van a ingresar otras 5 caracteristicas-----")
+
+objeto2 = dict({input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " ", input("ingrese otra caracteristica: "): " "})
+
+cont = 0
+
+for key in objeto1: 
+  if key in objeto2 and objeto1[key] == objeto2[key]:
+    cont += 1
+        
+if cont == 5:
+    print("Los objetos son iguales")
+elif cont == 3:
+    print("los objetos son parecidos")
+elif cont == 2 or cont < 2:
+    print("los objetos son diferentes")
+
+
+

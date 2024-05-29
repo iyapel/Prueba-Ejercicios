@@ -1,0 +1,21 @@
+Milista = []
+condi = True
+cond = 0
+
+def push():
+    global condi
+    global cond
+    while condi:
+        elementos = input("Ingrese elementos en la lista separados por comas: ")
+        Milista.extend(elementos.split(","))
+        cond = input("Son todos los elementos? 1-SI  2-NO  ")
+        if cond == 1:
+            condi = False
+            return Milista[:]
+        else:
+            condi = True
+            break
+push()
+while not len(Milista) == 0:
+    Num = Milista.pop()
+    print(Num)

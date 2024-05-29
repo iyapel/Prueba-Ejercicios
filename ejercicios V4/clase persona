@@ -1,0 +1,16 @@
+class Persona():
+    def __init__(self, edad, genero, nombre):
+        self.edad = edad
+        self.genero = genero 
+        self.nombre = nombre 
+    def saludar(self):
+        print(f"Hola, estudiante {self.nombre}")
+
+edad = (int(input("Ingrese su edad ")))
+genero = (input("ingrese su genero "))
+nombre = (input("Ingrese su nombre "))
+
+persona1 = Persona(edad, genero, nombre)
+
+persona1.saludar()
+

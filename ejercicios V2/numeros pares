@@ -1,0 +1,6 @@
+Num = int(input("Escriba un numero "))
+if Num&1: #ESTO LABURA PARA EL JUEGO 
+    print("El numero es impar")
+else:
+    print("El numero es par")
+

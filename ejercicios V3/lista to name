@@ -1,0 +1,12 @@
+print("-----LISTA DE NOMBRES-----")
+
+mi_lista = []
+condicional = 1
+while condicional == 1:
+    
+    name = input("Ingrese un nombre ")
+    mi_lista.append(name)
+    condicional = int(input("Esos son todos los nombres? 1-NO 2-SI"))
+    
+print(mi_lista[:])
+

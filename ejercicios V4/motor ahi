@@ -1,0 +1,26 @@
+class coche():
+    def __init__(self, filtro_aire, distruibuidor, carburador, piston, c_camara, cable_tension, carter, bujias):
+        self.filtro_aire = filtro_aire
+        self.distruibuidor = distruibuidor
+        self.carburador = carburador
+        self.piston = piston
+        self.c_camara = c_camara
+        self.cable_tension = cable_tension
+        self.carter = carter
+        self.bujias = bujias
+        
+    def Motor_estado(self):
+        print(f"este es el estado de los componentes. Filtro de aire: {filtro_aire}, distruibuidor:{distruibuidor},carburador:{carburador},piston:{piston},c_camara:{c_camara},cable_tension:{cable_tension},carter: {carter}, bujias:{bujias}")
+
+filtro_aire = input("ingrese el estado del filtro de aire ")
+distruibuidor = input("ingrese el estado del distruibuidor ")
+carburador= input("ingrese el estado del carburador ")
+piston = input("ingrese el estado del piston ")
+c_camara = input("ingrese el estado de la camara de combustion ")
+cable_tension = input("ingrese el estado del cable de tension ")
+carter = input("ingrese el estado del carter ")
+bujias = input("ingrese el estado de las bujias ")
+
+motor1 = coche(filtro_aire, distruibuidor, carburador, piston, c_camara, cable_tension, carter, bujias)
+
+motor1.Motor_estado()

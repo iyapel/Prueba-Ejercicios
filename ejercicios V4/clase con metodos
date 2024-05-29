@@ -1,0 +1,57 @@
+class circulo():
+    
+    def formula(self):
+        radio = int(input("ingrese el radio "))
+        Área = 3.14 * radio^2
+        Perímetro = 2 * 3.14 * radio
+        print(f"El area y el perimetro son: {Área, Perímetro}")
+        
+class cuadrado():
+    
+    def formula(self):
+        lado = int(input("ingrese el tamaño de uno de los lados "))
+        Área = lado^2
+        Perímetro = 4 * lado
+        print(f"El area y el perimetro son: {Área, Perímetro}")
+        
+class rectangulo():
+    
+    def formula(self):
+        largo = int(input("ingrese el largo "))
+        ancho = int(input("ingrese el ancho "))
+        Área = largo * ancho
+        Perímetro = 2 * (largo + ancho)
+        print(f"El area y el perimetro son: {Área, Perímetro}")
+        
+class triangulo():
+    
+    def formula(self):
+        lado1 = int(input("ingrese el tamaño de uno de los lados "))
+        lado2 = int(input("ingrese el tamaño de uno de los lados "))
+        lado3 = int(input("ingrese el tamaño de uno de los lados "))
+        base = int(input("ingrese la base "))
+        altura = int(input("ingrese la altura "))
+        Área = (base * altura) / 2
+        Perímetro = lado1 + lado2 + lado3
+        print(f"El area y el perimetro son: {Área, Perímetro}")
+    
+Mi_eleccion = int(input("Elija una opcion 1-triangulo  2-circulo  3-rectangulo  4-cuadrado "))
+if Mi_eleccion == 1:
+  circulo = circulo()
+  circulo.formula()
+  
+elif Mi_eleccion == 2:
+  cuadrado = cuadrado()
+  cuadrado.formula()
+
+
+elif Mi_eleccion == 3:
+  rectangulo = rectangulo()
+  rectangulo.formula()
+  
+elif Mi_eleccion == 4:
+  triangulo = triangulo()
+  triangulo.formula()
+
+else:
+  print("Opción no válida")

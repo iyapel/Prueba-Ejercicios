@@ -1,0 +1,25 @@
+print("---POLIFORMISMO PA---")
+
+class vertebrados():
+    def animal(self):
+        print("Tiene columna vertebral")
+
+class invertebrados():
+    def animal(self):
+        print("No tiene columna vertebral")
+
+def Tipo_de_animal(Animal):
+    
+    Animal.animal()
+
+Mi_animal = int(input("Seleccione una opcion 1-Vertebrado 2-Invertebrado "))
+
+if Mi_animal == 1:
+    Mi_animal = vertebrados()
+elif Mi_animal == 2:
+    Mi_animal = invertebrados()
+else:
+    print("Opcion no valida perro :( ")
+
+Tipo_de_animal(Mi_animal)
+

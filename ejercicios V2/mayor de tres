@@ -1,0 +1,13 @@
+Num = int(input("Escriba un numero "))
+
+Num2 = int(input("ingrese otro numero "))
+
+Num3 = int(input("ingrese otro numero "))
+
+if Num > Num2 and Num>Num3:
+    print("El numero mayor es ", Num)
+if Num2 > Num and Num2> Num3:
+    print("El numero mayor es ", Num2)
+else:
+    print("El numero mayor es", Num3)
+

@@ -1,0 +1,19 @@
+print("----- PROMEDIO -----")
+Num1 = 0
+cont = 0
+Promedio = 0
+Paso_Final = 2
+while Paso_Final == 2:    
+    Num = int(input("Escriba un numero "))
+    Num1 = Num1 + Num
+    cont = cont + 1
+    Promedio = Num1 / cont
+    Paso_Final=int(input("Son todos los dijitos? 1-SI 2-NO "))
+
+
+    if Paso_Final != 1 and Paso_Final != 2:
+        print("la opcion no es valida ")
+    if Paso_Final == 1:
+        print("El promedio es ",Promedio )
+
+

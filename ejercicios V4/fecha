@@ -1,0 +1,13 @@
+from datetime import date
+
+class Fecha:
+  def obtener_fecha_actual(self):
+    return date.today()
+
+fecha_actual = Fecha().obtener_fecha_actual()
+
+año = fecha_actual.year
+mes = fecha_actual.month
+dia = fecha_actual.day
+
+print(f"Dia: {dia}, mes {mes}, año {año}")

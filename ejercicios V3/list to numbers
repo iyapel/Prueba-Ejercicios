@@ -1,0 +1,14 @@
+print("-----LISTA DE NUMEROS DE MAYOR A MENOR-----")
+
+mi_lista = []
+condicion = 2
+while condicion == 2:
+    
+    num = input("Ingrese un numero ")
+    mi_lista.append(num)
+    condicion = int(input("Son todos los numeros? 1-SI  2-NO"))
+
+Ordenados = mi_lista
+Ordenados.sort()
+print(Ordenados[:])
+

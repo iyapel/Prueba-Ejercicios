@@ -1,0 +1,42 @@
+#print("Hola internauta de internet aunque sepa que solo sea yo mismo y mi esquizofrenia :)")
+#Name = input("whats your name?")
+#last_name = input("whats yor last name gocho?")
+
+#print(Name, last_name) #nombre, apellido, cel, edad 
+
+
+
+archivo = open("archivo", "r")
+
+Vul = 1
+milista = []
+while line := archivo.readline():
+    
+    usuario = {}
+    
+    if Vul == 1:
+        usuario["name"] = archivo.readline()
+        Vul +=1
+    
+    if Vul == 2:
+        usuario["apellidos"] = archivo.readline()
+        Vul +=1
+    
+    if Vul == 3:
+        usuario["cel"]=archivo.readline()
+        Vul +=1
+    
+    if Vul == 4:
+        usuario["edad"] = archivo.readline()
+        Vul +=1
+    milista.append(usuario)
+    
+    if archivo == "":
+        break
+    Vul = 1 
+
+print(milista)
+
+
+
+

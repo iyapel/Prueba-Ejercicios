@@ -1,0 +1,7 @@
+vocal = input("ingrese una frase")
+Con = 0
+for c in vocal:
+    if c == "a" or c == "e" or c == "i" or c == "o" or c == "u": 
+        Con = Con + 1
+        
+print(Con)

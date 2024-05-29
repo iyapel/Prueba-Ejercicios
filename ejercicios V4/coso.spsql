@@ -1,0 +1,9 @@
+--CREATE TABLE login(email varchar(30), usuario varchar(30), pass varchar(25));
+
+--INSERT INTO login(email,usuario,pass)
+
+--VALUES ("Elpepe@si.com","pepe","4631")
+
+
+SELECT * FROM login;
+

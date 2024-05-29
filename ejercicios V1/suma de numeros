@@ -1,0 +1,8 @@
+Num1 = int(input("ingrese un numero "))
+
+Num2 = int(input("ingrese otro numero "))
+
+R = Num1 / Num2
+
+print(R)
+

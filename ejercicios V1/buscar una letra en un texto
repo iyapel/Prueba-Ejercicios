@@ -1,0 +1,9 @@
+buscar = input("ingrese una letra")
+texto = input("ingrese una cadena de texto")
+
+for i in texto:
+    if i == buscar:
+        print(i)
+        
+
+    

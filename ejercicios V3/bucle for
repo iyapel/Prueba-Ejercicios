@@ -1,0 +1,18 @@
+print("------BUSQUEDA DE ELEMENTOS EN UNA LISTA------")
+
+Milista = []
+cond = 1
+
+while cond == 1:
+    elementos = input("Ingrese elementos en la lista separados por comas: ")
+    Milista.extend(elementos.split(","))
+    cond = int(input("Son todos los elementos de la lista que quiere agregar? 1-NO  2-SI "))
+    cont = len(Milista)
+
+Selec = int(input("Seleccione la ubicación a la cual quiere acceder con números: "))
+
+for i in range(cont):
+    if i == Selec - 1:
+        print(Milista[i])
+        break
+

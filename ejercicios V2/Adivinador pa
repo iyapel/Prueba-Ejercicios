@@ -1,0 +1,13 @@
+import random
+print("Vamos a adivinar un numero del 1 a 100 pa ")
+
+Seleccion = int(input("ponga un numero del 1 al 100 "))
+Num=random.randrange(1, 100)
+
+if Seleccion > 100 or Seleccion < 1:
+    raise Exception("ERROR NO SIRVE")
+if Seleccion == Num:
+    print("El numero fue adivinado exitosamente xd ")
+else:
+    print("usted no sabe adivinar numeros fracasado ")
+

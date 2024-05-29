@@ -1,0 +1,5 @@
+Mayus = input("ingrese un texto")
+
+newmayus = Mayus.upper()
+
+print(newmayus)

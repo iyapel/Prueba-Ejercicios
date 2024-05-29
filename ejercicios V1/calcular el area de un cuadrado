@@ -1,0 +1,18 @@
+#lad1 = int(input("ingrese un lado del cuadrado "))
+
+#lad2 = int(input("ingrese el otro lado del cuadrado "))
+
+#area = lad1 * lad2
+#print(area)
+
+import math
+
+PI = math.pi 
+
+R = int(input("ingrese R"))
+
+area = PI * R ** 2
+
+print (area)
+
+#π r²

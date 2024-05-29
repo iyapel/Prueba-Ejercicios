@@ -1,0 +1,15 @@
+#clase excepccion hereda de la clase que tiene python y meter mis propias excepciones
+
+class MiError(Exception):
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+
+def mi_funcion():
+    raise MiError("Ocurrió un error")
+
+try:
+    mi_funcion()
+except MiError as e:
+    print(e.mensaje)
+
+

@@ -1,0 +1,131 @@
+print("Opcion 1- Calculadora de dos digitos ", "\nOpcion 2- Determinar si eres gocho ", "\nOpcion 3- Mi cancion favorita ", "\nOpcion 4- Ella me quiere?", "\nOpcion 5- Ruleta Rusa Game")
+
+Num = int(input("seleccione un numero "))
+
+def Opcion1():
+    digito1 = int(input("Ingrese un numero "))
+    digito2 = int(input("Ingrese otro numero "))
+    
+    print("Escriba la operacion a realizar (suma,resta,multiplicacion,divison) ")
+
+    Seleccion = input()
+    Seleccion = Seleccion.upper()
+    
+    if Seleccion == "SUMA":
+        Resultado = digito1 + digito2
+        print(Resultado)
+    elif Seleccion == "RESTA":
+        Resultado = digito1 - digito2
+        print(Resultado)
+    elif Seleccion == "MULTIPLICACION":
+        Resultado = digito1 * digito2
+        print(Resultado)
+    elif Seleccion == "DIVISION":
+        Resultado = digito1 / digito2
+        print(Resultado)
+    else:
+        print("La operacion solicitada no esta disponible sorry intente de nuevo (suma,resta,multiplicacion,divison)") 
+        
+        Opcion1()
+
+def Opcion2():
+    Estado = input("ingrese su estado(geografico no fisico pq si no hay depre) ")
+    Name = input("ingrese su nombre ")
+    Edad = int(input("Ingrese su edad "))
+    Dato_Xps = input("ingrese pq magnus carsen tiene mas de 2500 de elo ")
+    
+    Estado = Estado.upper()
+    Name = Name.upper()
+    if Estado == "MERIDA":
+        
+        print("mister", Name, "que cuenta con la edad de ", Edad, "me temo informarle que usted es gocho")
+       
+    if Name == "VITO" or Name == "THOMAS":
+        
+        print(Name,"definitivamente eres gocho ")
+    elif Estado != "MERIDA" and Name != "VITO" or Name != "THOMAS":
+        print("FELICIDADES ",Name,"USTED NO ES GOCHO :) ")
+        
+def Opcion3():
+    print("No se tengo muchas en spotify, cual es la tuya?")
+    
+    mi_cancion = input("")
+    
+    print(mi_cancion,"que buen gusto musical pa, bien ahi")
+    
+def Opcion4():
+    
+    print("Ella te quiere?")
+    Tu_name = input("Escribe tu nombre ")
+    Su_name = input("EScribe su nombre ")
+    import random
+    numero = random.randint(1, 2)
+    if numero == 1:
+        print(Su_name, "Ella te quiere ", Tu_name)
+    else:
+        print(Su_name, "Ella no te quiere bro sorry")
+
+def Opcion5():
+    class estado():
+        Jugador1_estado = "Live"
+        Jugador2_estado = "Live"
+        
+    import random
+    import time
+    Jugador1 = input("Escribe tu nombre ")
+    Jugador2 = input("Escribe el nombre rival ")
+
+    balas = 0
+    while balas != 1: 
+        Jugador1_estado = "Live"
+        print("-----------TURNO DE",Jugador1,"-------------")
+        time.sleep(4)
+        balas = random.randint(1, 6)
+        if balas == 1:
+            print("EL JUGADOR", Jugador2 , "GANA")
+            Jugador1_estado = "Balaceado"
+            print("EL", Jugador1,"FUE ",Jugador1_estado)
+            break
+        else:
+            print("El cartucho estaba vacio")
+            print("El estado de ", Jugador1, "es ", Jugador1_estado)
+
+        Jugador2_estado = "Live"
+        print("-----------TURNO DE", Jugador2,"-------------")
+        time.sleep(4)
+        balas = random.randint(1, 5)
+        if balas ==1:
+            print("EL JUGADOR", Jugador1 , "GANA")
+            Jugador2_estado = "Balaceado"
+            print("EL", Jugador2,"FUE ",Jugador2_estado)
+            break
+        else:
+            print("El cartucho estaba vacio")
+            print("El estado de ", Jugador2, "es ", Jugador2_estado)
+        
+
+if Num == 1:
+    Opcion1()
+elif Num == 2:
+    Opcion2()
+elif Num == 3:
+    Opcion3()    
+elif Num == 4:
+    Opcion4()    
+elif Num == 5:
+    Opcion5()
+else:
+    while Num !=1 or Num !=2 or Num !=3 or Num !=4 or Num !=5:
+        print("Opcion no valida, intente de nuevo")
+        Num = int(input("seleccione un numero "))
+        if Num == 1:
+            Opcion1()
+        elif Num == 2:
+            Opcion2()
+        elif Num == 3:
+            Opcion3()    
+        elif Num == 4:
+            Opcion4()    
+        elif Num == 5:
+            Opcion5()
+ 

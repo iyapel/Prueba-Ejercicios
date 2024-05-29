@@ -1,0 +1,12 @@
+print("------Muestra de numeros pares------")
+
+Num_Par = 0
+cont = 0
+while cont < 100:
+    
+    Num_Par = Num_Par + 1
+    Num = int(Num_Par / 2 * 2)
+    cont = cont + 1
+    if Num % 2 == 0:
+        print(Num_Par)
+    

@@ -1,0 +1,13 @@
+print("------DATOS DE ESTUDIANTES------")
+
+datos = {"curso":" ", "seccion": " ","Notas": " ","Nombre": " "}
+
+print("ingrese los datos del estudiante")
+
+datos["curso"] = input("ingrese el curso ")
+datos["seccion"] = input("ingrese la seccion ")
+datos["Notas"] = input("ingrese las notas ")
+datos["Nombre"] = input("ingrese el Nombre ")
+
+print(datos)
+

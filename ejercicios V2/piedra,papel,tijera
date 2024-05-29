@@ -1,0 +1,47 @@
+print("---------Piedra papel o tijeras VS PC---------")
+
+Jugador1 = input("Ingrese su nombre ")
+Jugador2 = "La PC"
+
+Seleccion = input("Diga que quieres sacar(PIEDRA, PAPEL, TIJERAS)")
+
+Seleccion = Seleccion.upper()
+
+import random
+
+Seleccion2 = random.randrange(1, 3)
+
+
+def Gerarquia_del_Juego(Movimiento):
+    
+    if Movimiento == 1:
+        Movimiento = "PIEDRA"
+    elif Movimiento == 2:
+        Movimiento = "PAPEL"
+    elif Movimiento == 3:
+        Movimiento = "TIJERAS"
+        
+    if Seleccion == "PIEDRA" and Movimiento != "PIEDRA" and Movimiento != "PAPEL":
+        print(Seleccion, "le gana a", Movimiento, "El jugador", Jugador1,"gana")
+        
+    elif Seleccion == "PAPEL" and Movimiento != "PAPEL" and Movimiento != "TIJERAS":
+        print(Seleccion, "le gana a", Movimiento, "El jugador", Jugador1,"gana")
+        
+    elif Seleccion == "TIJERAS" and Movimiento != "TIJERAS" and Movimiento != "PIEDRA":
+        print(Seleccion, "le gana a", Movimiento, "El jugador", Jugador1,"gana")
+    
+    elif Movimiento == "PIEDRA" and Seleccion != "PIEDRA" and Seleccion != "PAPEL":
+        print(Seleccion, "le gana a", Movimiento, "El jugador", Jugador2,"gana")
+        
+    elif Movimiento == "PAPEL" and Seleccion != "PAPEL" and Seleccion != "TIJERAS":
+        print(Movimiento, "le gana a", Seleccion, "El jugador", Jugador2,"gana")
+        
+    elif Movimiento == "TIJERAS" and Seleccion != "TIJERAS" and Seleccion != "PIEDRA":
+        print(Movimiento, "le gana a", Seleccion, "El jugador", Jugador2,"gana")
+    else:
+        print("EMPATE AMBOS SACARON LO MISMO")
+        
+        
+
+Gerarquia_del_Juego(Seleccion2)
+        

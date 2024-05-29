@@ -1,0 +1,13 @@
+def masa_corporal():
+    
+    peso = int(input("ingrese su peso en Kilogramos "))
+    
+    Altura = int(input("Ingrese su altura en centimetros "))
+    
+    Altura_cuadrado = (Altura/100) **2 
+    
+    imc = peso / Altura_cuadrado
+    
+    print(imc)
+
+masa_corporal()

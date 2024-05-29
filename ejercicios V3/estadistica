@@ -1,0 +1,35 @@
+print("----------ESTADISTICA----------")
+
+milista = []
+cond = 1
+cont_elementos = 0
+suma_elementos = 0
+
+while cond == 1:
+    try:
+        elementos = int(input("Ingrese elementos numéricos en la lista: "))
+    except ValueError:
+        print("Error: Debe ingresar un número entero.")
+        continue
+
+    print(f"Elemento {cont_elementos + 1}: {elementos}")
+    milista.append(elementos)
+    cont_elementos += 1
+    suma_elementos += elementos
+    cond = int(input("¿Son todos los elementos de la lista que quiere agregar? 1-NO 2-SI: "))
+
+media = suma_elementos / cont_elementos
+
+milista.sort()
+lista_ordenada = milista[:]
+
+posicion_medional = int(cont_elementos / 2) - 1
+mediana = (lista_ordenada[posicion_medional] + lista_ordenada[posicion_medional + 1]) / 2
+
+moda_dict = {}
+for elemento in milista:
+    moda_dict[elemento] = moda_dict.get(elemento, 0) + 1
+
+moda = max(moda_dict, key=moda_dict.get)
+
+print(f"La media es {media:.2f} La mediana es {mediana:.2f} y la Moda es {moda}")
