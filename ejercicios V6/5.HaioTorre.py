@@ -1,121 +1,32 @@
 x = int(input("Cantidad de discos: "))
 
-cond = 0
-discos = 0
-mi_lista = []
-while discos < x:
-    discos = discos + 1 
-    mi_lista.append(discos)
-    
-pilar_1 = mi_lista
+# Inicialización de los pilares
+pilar_1 = list(range(x, 0, -1))
 pilar_2 = []
 pilar_3 = []
 
-Ultimo_Valor_1 = 0
-Ultimo_Valor_2 = 0
-Ultimo_Valor_3 = 0
+# Función para imprimir el estado de los pilares
+def imprimir_pilares(cont):
+    print("Pilar 1:", pilar_1)
+    print("Pilar 2:", pilar_2)
+    print("Pilar 3:", pilar_3)
+    print("Movimientos:", cont)
 
-Ultimo_Indice_1 = 0
-Ultimo_Indice_2 = 0
-Ultimo_Indice_3 = 0
-
-print(mi_lista)
-
-while pilar_3 != mi_lista:
-    
-    #Izquierda, Derecha
-    
-    cond = cond + 1
-    print(cond)
-    
-    Ultimo_Indice_1 = len(pilar_1) - 1
-    Ultimo_Indice_2 = len(pilar_2) - 1
-    Ultimo_Indice_3 = len(pilar_3) - 1
-    
-    if Ultimo_Indice_1 < 0:
-        Ultimo_Indice_1 = Ultimo_Indice_1 + 1
-    elif Ultimo_Indice_2 < 0:
-        Ultimo_Indice_2 = Ultimo_Indice_2 + 1
-    elif Ultimo_Indice_3 < 0:
-        Ultimo_Indice_3 = Ultimo_Indice_3 + 1
-    
-    if pilar_2 and pilar_3:
-        Ultimo_Valor_1 = pilar_1[Ultimo_Indice_1]
-        Ultimo_Valor_2 = pilar_2[Ultimo_Indice_2]
-        Ultimo_Valor_3 = pilar_3[Ultimo_Indice_3]   
+# Función recursiva para resolver el problema
+def resolver_torres(n, origen, auxiliar, destino, cont):
+    if n == 1:
+        # Moviendo el disco superior de origen a destino
+        destino.append(origen.pop())
+        imprimir_pilares(cont)
+        cont += 1
     else:
-        Ultimo_Valor_1 = Ultimo_Indice_1
-        if pilar_2:
-            Ultimo_Valor_2 = pilar_2
-        elif pilar_3:
-            Ultimo_Valor_3 = pilar_3
-            
-    if Ultimo_Valor_1 > Ultimo_Indice_2 and Ultimo_Indice_2 < len(pilar_2):
-        pilar_1.append(pilar_2[Ultimo_Indice_2]) 
-        del pilar_2[Ultimo_Indice_2] 
-        Ultimo_Indice_2 = len(pilar_2) - 1  
-        
-    if Ultimo_Valor_2 > Ultimo_Indice_3 and Ultimo_Indice_3 < len(pilar_3) and pilar_3:
-        pilar_2.append(pilar_3[Ultimo_Indice_3])  
-        del pilar_3[Ultimo_Indice_3] 
-        Ultimo_Indice_3 = len(pilar_3) - 1 
-        
-    #Derecha, Izquierda
-    
-    Ultimo_Indice_1 = len(pilar_1) - 1
-    Ultimo_Indice_2 = len(pilar_2) - 1
-    Ultimo_Indice_3 = len(pilar_3) - 1
-    
-    if Ultimo_Indice_1 < 0:
-        Ultimo_Indice_1 = Ultimo_Indice_1 + 1
-    elif Ultimo_Indice_2 < 0:
-        Ultimo_Indice_2 = Ultimo_Indice_2 + 1
-    elif Ultimo_Indice_3 < 0:
-        Ultimo_Indice_3 = Ultimo_Indice_3 + 1
-    
-    if pilar_2 and pilar_3:
-        Ultimo_Valor_1 = pilar_1[Ultimo_Indice_1]
-        Ultimo_Valor_2 = pilar_2[Ultimo_Indice_2]
-        Ultimo_Valor_3 = pilar_3[Ultimo_Indice_3]   
-    else:
-        Ultimo_Valor_1 = Ultimo_Indice_1
-        if pilar_2:
-            Ultimo_Valor_2 = pilar_2
-        elif pilar_3:
-            Ultimo_Valor_3 = pilar_3
-            
-    Ultimo_Indice_1 = len(pilar_1) - 1
-    Ultimo_Indice_2 = len(pilar_2) - 1
-    Ultimo_Indice_3 = len(pilar_3) - 1
-    
-    if Ultimo_Indice_1 < 0:
-        Ultimo_Indice_1 = Ultimo_Indice_1 + 1
-    elif Ultimo_Indice_2 < 0:
-        Ultimo_Indice_2 = Ultimo_Indice_2 + 1
-    elif Ultimo_Indice_3 < 0:
-        Ultimo_Indice_3 = Ultimo_Indice_3 + 1
-    
-    if pilar_2 and pilar_3:
-        Ultimo_Valor_1 = pilar_1[Ultimo_Indice_1]
-        Ultimo_Valor_2 = pilar_2[Ultimo_Indice_2]
-        Ultimo_Valor_3 = pilar_3[Ultimo_Indice_3]   
-    else:
-        Ultimo_Valor_1 = Ultimo_Indice_1
-        if pilar_2:
-            Ultimo_Valor_2 = pilar_2
-        elif pilar_3:
-            Ultimo_Valor_3 = pilar_3
-            
-    if Ultimo_Valor_2 > Ultimo_Indice_1 and Ultimo_Indice_2 < len(pilar_2) and pilar_2:
-        pilar_1.append(pilar_2[Ultimo_Indice_2])
-        del pilar_2[Ultimo_Indice_2]  
-        Ultimo_Indice_2 = len(pilar_2) - 1  
-        
-    if Ultimo_Valor_2 > Ultimo_Indice_3 and Ultimo_Indice_3 < len(pilar_3) and pilar_3:
-        pilar_2.append(pilar_3[Ultimo_Indice_3])  
-        del pilar_3[Ultimo_Indice_3]  
-        Ultimo_Indice_3 = len(pilar_3) - 1
+        # Moviendo n-1 discos de origen a auxiliar usando destino como auxiliar
+        cont = resolver_torres(n-1, origen, destino, auxiliar, cont)
+        # Moviendo el disco restante de origen a destino
+        cont = resolver_torres(1, origen, auxiliar, destino, cont)
+        # Moviendo n-1 discos de auxiliar a destino usando origen como auxiliar
+        cont = resolver_torres(n-1, auxiliar, origen, destino, cont)
+    return cont
 
-print("Pilar 1:", pilar_1)
-print("Pilar 2:", pilar_2)
-print("Pilar 3:", pilar_3)
+# Llamada inicial a la función
+resolver_torres(x, pilar_1, pilar_2, pilar_3, 0)
