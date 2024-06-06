@@ -7,9 +7,9 @@ for i in range(1, Numero):
 
 valor_maximo = -300000
 
-for x in range(Valores[:]):
-    if x > Valores[:]:
+for x in Valores[:]:
+    if x > valor_maximo:
         valor_maximo = x
 
 print(valor_maximo)
-print(1)
+print(Valores[:])
