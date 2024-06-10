@@ -12,4 +12,3 @@ a = int(input("El valor que se quiere elevar: "))
 b = int(input("cuantas veces quiere elevar el valor: "))
 
 print(Potencias(a, b))
-

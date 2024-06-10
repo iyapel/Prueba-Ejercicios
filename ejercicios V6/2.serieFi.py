@@ -1,11 +1,18 @@
-a = 0
-b = 1
-c = 0
-cond = int(input("Ingrese el número de valores que desea ver: "))
+Valor_1 = 0
 
-for i in range(cond + 1):
-    c = a + b
-    a = b 
-    b = c
-    print("vuelta", i, "numero ", c)
+Valor_2 = 1
+
+Auxiliar = 0
+
+Rango = int(input("Ingrese el número de valores que desea ver: "))
+
+for i in range(Rango +1):
+    
+    Auxiliar = Valor_1 + Valor_2
+    
+    Valor_1 = Valor_2 
+    
+    Valor_2 = Auxiliar
+    
+    print("vuelta", i, "numero ", Auxiliar)
 
