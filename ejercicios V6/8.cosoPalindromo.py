@@ -2,13 +2,12 @@ Palabra = input("Ingrese una palabra: ")
 Auxiliar = Palabra.lower()
 
 Resultado = False
-
 Invertida = ""
 
-for i in Palabra:
-    for h in Palabra:
+for i in Auxiliar:
+    for h in Auxiliar:
         Invertida = h + Invertida
-        if Palabra == Invertida:
+        if Auxiliar == Invertida:
             Resultado = True
             
 print(Resultado)    

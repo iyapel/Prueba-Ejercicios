@@ -1,3 +1,6 @@
+#Link de la explicacion del codigo
+#https://youtu.be/MgsEhcNAKTE
+
 Texto = input("Ingrese un texto: ")
 
 Texto_invertido = ""

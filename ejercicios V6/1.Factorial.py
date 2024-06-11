@@ -1,3 +1,6 @@
+#explicacion del codigo:
+#https://youtu.be/8FzEhlt6fk4
+
 Valor_Ingresado = int(input("Ingrese un valor para sacar su factorial: "))
 
 Resultado = Valor_Ingresado

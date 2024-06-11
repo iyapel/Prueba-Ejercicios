@@ -1,3 +1,6 @@
+#Link de la explicacion del codigo:
+#https://youtu.be/asObeoHlaDQ
+
 Numero = int(input("Ingrese un numero: "))
 
 Valores = []

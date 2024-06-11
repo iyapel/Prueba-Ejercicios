@@ -1,3 +1,6 @@
+#Link de la explicacion del codigo:
+#https://youtu.be/zPS6R1DCMbI
+
 Valor_1 = 0
 
 Valor_2 = 1
