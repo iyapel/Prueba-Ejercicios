@@ -1,3 +1,6 @@
+#link de la explicacion del codigo
+#https://youtu.be/ggFE9DbX8HE
+
 Palabra = input("Ingrese una palabra: ")
 Auxiliar = Palabra.lower()
 
@@ -10,4 +13,4 @@ for i in Auxiliar:
         if Auxiliar == Invertida:
             Resultado = True
             
-print(Resultado)    
+print(Resultado)

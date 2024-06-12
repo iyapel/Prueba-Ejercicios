@@ -8,8 +8,7 @@ def merge_sort(arr):
     
     left_half = merge_sort(left_half)
     right_half = merge_sort(right_half)
-    
-    # Combinar las dos mitades ordenadas
+
     return merge(left_half, right_half)
 
 def merge(left, right):

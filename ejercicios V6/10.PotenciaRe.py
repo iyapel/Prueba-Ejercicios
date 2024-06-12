@@ -1,3 +1,6 @@
+#Link de la explicacion del codigo:
+#https://youtu.be/7CgVkA2aTxI
+
 def Potencias(a,b):
     if b == 0:
         return 1
