@@ -1,9 +1,12 @@
-cond = 1
+#link con la explicacion del codigo:
+#https://youtu.be/9inZCaMKeGs
+
+condicion = 1
 Mi_lista = []
-while cond == 1:
+while condicion == 1:
     x = int(input("Ingrese un valor a la lista: "))
     Mi_lista.append(x)
-    cond = int(input("¿Son todos los valores que desea agregar? 1-No 2-Si "))
+    condicion = int(input("¿Son todos los valores que desea agregar? 1-Si 2-No "))
 
 def valor_mas_grande(Mi_lista):
     Valor_mayor = Mi_lista[0]

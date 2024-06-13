@@ -1,3 +1,6 @@
+#link con la explicacion del codigo:
+#https://youtu.be/Sg9P7vB3Ulw
+
 x = int(input("Cantidad de discos: "))
 
 pilar_1 = list(range(x, 0, -1))
