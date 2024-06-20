@@ -1,19 +1,19 @@
 #Link de la explicacion del codigo:
 #https://youtu.be/fWP0CFsvB7Y
 
-Numero = int(input("Ingrese un Numero: "))
-Valores = []
+def encontrar_max_divisor_propio(numero, actual_divisor=1, valores=[]):
+    
+    if actual_divisor == numero:
+        return max(valores) if valores else -1
 
-for i in range(1, Numero):
-    if Numero % i == 0:
-        Valores.append(i)
+    if numero % actual_divisor == 0:
+        valores.append(actual_divisor)
 
-valor_maximo = -3000000
+    return encontrar_max_divisor_propio(numero, actual_divisor + 1, valores)
 
-for x in Valores[:]:
-    if x > valor_maximo:
-        valor_maximo = x
+Numero = int(input("Ingrese un número: "))
 
-print(valor_maximo)
+resultado = encontrar_max_divisor_propio(Numero)
 
-print(Valores[:])
+# Mostrar el resultado
+print("El máximo divisor propio de", Numero, "es:", resultado)

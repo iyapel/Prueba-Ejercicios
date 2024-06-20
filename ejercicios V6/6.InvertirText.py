@@ -22,4 +22,4 @@ for i in Texto:
     
     Texto_invertido_A = i + Texto_invertido_A
     
-Resolver(Texto_invertido_F, Texto_invertido_A,resultado, cantidad)
+Resolver(Texto_invertido_F, Texto_invertido_A,+resultado, cantidad)

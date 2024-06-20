@@ -1,13 +1,40 @@
 #Link de la explicacion del codigo:
 #https://youtu.be/asObeoHlaDQ
 
-Numero = int(input("Ingrese un numero: "))
+def encontrar_divisores(numero, divisor=2, valores=[]):
 
-Valores = []
+    if divisor == numero:
+        return valores
 
-for i in range(2, Numero):
-    if Numero % i == 0:
-        Valores.append(i)
+    if numero % divisor == 0:
+        valores.append(divisor)
         
-print("el minimo comun multiplo de", Numero, "es ", Valores[:])
+    return encontrar_divisores(numero, divisor + 1, valores)
 
+def calcular_mcm(valores):
+    if not valores:
+        return None
+
+    def mcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    def mcm(a, b):
+        return a * (b // mcd(a, b))
+
+    resultado = valores[0]
+
+    for valor in valores[1:]:
+        resultado = mcm(resultado, valor)
+    
+    return resultado
+
+Numero = int(input("Ingrese un número: "))
+
+valores_divisores = encontrar_divisores(Numero)
+
+mcm_numero = calcular_mcm(valores_divisores)
+
+# Mostrar el resultado
+print("El mínimo común múltiplo de", Numero, "es:", mcm_numero)
