@@ -4,13 +4,12 @@
 Palabra = input("Ingrese una palabra: ")
 Auxiliar = Palabra.lower()
 
-Resultado = False
-Invertida = ""
+def Resolver(Auxiliar):
+    Invertida = Auxiliar[::-1]  # Invierte la cadena utilizando slicing
+    if Invertida == Auxiliar:
+        return True
+    else:
+        return False
 
-for i in Auxiliar:
-    for h in Auxiliar:
-        Invertida = h + Invertida
-        if Auxiliar == Invertida:
-            Resultado = True
-            
+Resultado = Resolver(Auxiliar)
 print(Resultado)
