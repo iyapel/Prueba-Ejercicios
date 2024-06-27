@@ -24,7 +24,7 @@ def resolver_torres(n, origen, auxiliar, destino, cont):
         cont = resolver_torres(1, origen, auxiliar, destino, cont)
         
         cont = resolver_torres(n-1, auxiliar, origen, destino, cont)
-    
+
     return cont
 
 resolver_torres(x, pilar_1, pilar_2, pilar_3, 0)
