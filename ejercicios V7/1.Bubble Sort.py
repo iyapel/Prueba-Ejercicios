@@ -1,14 +1,16 @@
-def bubble_sort(arreglo):
-    n = len(arreglo)
-    for i in range(n):
-        swapped = False
-        for x in range(0, n-i-1):
-            if arreglo[x] > arreglo[x+1]:
-                arreglo[x], arreglo[x+1] = arreglo[x+1], arreglo[x]
-                swapped = True
-        if not swapped: break
-               
-x = [9, 8, 7, 5, 4, 3, 0]
+def bubble_sort(arr):  
+    longitud = len(arr)  
+    for i in range(longitud - 1): 
+        intercambiado = False 
+        for x in range(longitud - i - 1): 
+            if arr[x] > arr[x + 1]:
+                arr[x], arr[x + 1] = arr[x + 1], arr[x]
+                intercambiado = True  
+        if not intercambiado:  
+            break  
+    return arr  
 
-bubble_sort(x)
-print(x)
+lista = [6, 5, 3, 2, 1, 9, 7, 4, 8]
+
+lista_ordenada = bubble_sort(lista)  
+print(lista_ordenada)  
