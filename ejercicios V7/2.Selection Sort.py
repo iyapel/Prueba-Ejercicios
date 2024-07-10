@@ -1,5 +1,5 @@
 def ordenamiento_por_seleccion(lista):
-    
+  
   for i in range(len(lista)):
     indice_minimo = i
     for x in range(i + 1, len(lista)):
