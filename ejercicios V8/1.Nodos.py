@@ -38,3 +38,16 @@ class ABB:
             else:
                 actual = actual.right
         return False
+
+abb = ABB()
+
+abb.insert(5)
+abb.insert(3)
+abb.insert(7)
+abb.insert(2)
+abb.insert(4)
+abb.insert(6)
+abb.insert(8)
+
+print(abb.search(3))  # Deberia imprimir True
+print(abb.search(9))  # Deberia imprimir False
